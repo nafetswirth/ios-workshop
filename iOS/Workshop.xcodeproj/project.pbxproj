@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C211C6471C886D2B00E0F280 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211C6461C886D2B00E0F280 /* SocketService.swift */; };
 		C250B5A91C5FB2120004FBF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */; };
 		C250B5AB1C5FB2120004FBF9 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */; };
 		C250B5AE1C5FB2120004FBF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C250B5AC1C5FB2120004FBF9 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		C250B5D41C5FCB900004FBF9 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5D31C5FCB900004FBF9 /* TaskDetailView.swift */; };
 		C2BF4C7F1C886677000841D1 /* BlockBasedDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF4C7E1C886677000841D1 /* BlockBasedDatePicker.swift */; };
 		C2BF4C821C8866E7000841D1 /* TaskDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF4C811C8866E7000841D1 /* TaskDateFormatter.swift */; };
+		EA659909FE0DE33AEB4B602B /* Pods_Workshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5631EC87D8F9E8808E5F1246 /* Pods_Workshop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CE0A9603AD3936F3E75A08B /* Pods-Workshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workshop/Pods-Workshop.release.xcconfig"; sourceTree = "<group>"; };
+		5631EC87D8F9E8808E5F1246 /* Pods_Workshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9421B100E1AF50A21319861 /* Pods-Workshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workshop/Pods-Workshop.debug.xcconfig"; sourceTree = "<group>"; };
+		C211C6461C886D2B00E0F280 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		C250B5A51C5FB2120004FBF9 /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA659909FE0DE33AEB4B602B /* Pods_Workshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +75,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672D1AB7A262FB82F9130453 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9421B100E1AF50A21319861 /* Pods-Workshop.debug.xcconfig */,
+				4CE0A9603AD3936F3E75A08B /* Pods-Workshop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B62614654794F886B2CBA1FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5631EC87D8F9E8808E5F1246 /* Pods_Workshop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C211C6451C886D1300E0F280 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				C211C6461C886D2B00E0F280 /* SocketService.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
 		C250B59C1C5FB2120004FBF9 = {
 			isa = PBXGroup;
 			children = (
 				C250B5A71C5FB2120004FBF9 /* Workshop */,
 				C250B5BC1C5FB2120004FBF9 /* WorkshopTests */,
 				C250B5A61C5FB2120004FBF9 /* Products */,
+				672D1AB7A262FB82F9130453 /* Pods */,
+				B62614654794F886B2CBA1FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +129,7 @@
 				C2BF4C7D1C886648000841D1 /* datepicker */,
 				C2BF4C801C8866CA000841D1 /* formatter */,
 				C250B5D11C5FCB670004FBF9 /* model */,
+				C211C6451C886D1300E0F280 /* service */,
 				C250B5D21C5FCB740004FBF9 /* views */,
 				C250B5AC1C5FB2120004FBF9 /* Main.storyboard */,
 				C250B5AF1C5FB2120004FBF9 /* Assets.xcassets */,
@@ -169,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C250B5C21C5FB2120004FBF9 /* Build configuration list for PBXNativeTarget "Workshop" */;
 			buildPhases = (
+				29BEAFA8BF8AB1666A9E6D6E /* Check Pods Manifest.lock */,
 				C250B5A11C5FB2120004FBF9 /* Sources */,
 				C250B5A21C5FB2120004FBF9 /* Frameworks */,
 				C250B5A31C5FB2120004FBF9 /* Resources */,
+				17A4491579A942AE2A0A96CE /* Embed Pods Frameworks */,
+				71B2288460DEA52802C324AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +296,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17A4491579A942AE2A0A96CE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workshop/Pods-Workshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29BEAFA8BF8AB1666A9E6D6E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71B2288460DEA52802C324AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workshop/Pods-Workshop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C250B5A11C5FB2120004FBF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -271,6 +357,7 @@
 				C2BF4C7F1C886677000841D1 /* BlockBasedDatePicker.swift in Sources */,
 				C250B5CD1C5FB8EA0004FBF9 /* AddTaskViewController.swift in Sources */,
 				C2BF4C821C8866E7000841D1 /* TaskDateFormatter.swift in Sources */,
+				C211C6471C886D2B00E0F280 /* SocketService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +482,7 @@
 		};
 		C250B5C31C5FB2120004FBF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9421B100E1AF50A21319861 /* Pods-Workshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Workshop/Info.plist;
@@ -406,6 +494,7 @@
 		};
 		C250B5C41C5FB2120004FBF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CE0A9603AD3936F3E75A08B /* Pods-Workshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Workshop/Info.plist;
