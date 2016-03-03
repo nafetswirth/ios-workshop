@@ -19,7 +19,7 @@ class TaskListViewController: UIViewController {
     private lazy var tasks: [Task] = []
     
     private var taskService: TaskServiceProtocol = {
-        let baseURL = NSURL(string: "http://localhost:1337")!
+        let baseURL = NSURL(string: "https://ios-workshop.herokuapp.com")!
         return TaskService(
             baseURL: baseURL,
             socketService: SocketService(URL: baseURL, shouldLog: true)
