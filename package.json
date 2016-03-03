@@ -24,10 +24,10 @@
     "sails-disk": "~0.10.9"
   },
   "scripts": {
-    "debug": "node debug server/app.js",
-    "start": "node server/app.js"
+    "debug": "node debug app.js",
+    "start": "node app.js"
   },
-  "main": "server/app.js",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/herby/workshop.git"
