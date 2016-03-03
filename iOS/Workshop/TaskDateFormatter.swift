@@ -9,12 +9,11 @@
 import Foundation
 
 struct TaskDateFormatter {
-    let dateFormatter: NSDateFormatter
-    
-    init() {
-        self.dateFormatter = NSDateFormatter()
-        self.dateFormatter.dateFormat = "yyyy-MM-dd 'at' HH:mm"
-    }
+    private let dateFormatter: NSDateFormatter = {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd 'at' HH:mm"
+        return dateFormatter
+    }()
     
     func stringFromDate(date: NSDate) -> String {
         return self.dateFormatter.stringFromDate(date)

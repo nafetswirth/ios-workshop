@@ -55,7 +55,7 @@ class TaskDetailView: UIView {
     }
     
     @IBAction func didPressSaveTaskButton(sender: UIButton) {
-        let task = Task(name: taskNameTextField?.text ?? "", dueTo: NSDate(), isCompleted: false)
+        let task = Task(id: 1, name: taskNameTextField?.text ?? "", dueTo: NSDate(), isCompleted: false)
         self.delegate?.didFinishWithTask(task)
     }
     

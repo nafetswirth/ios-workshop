@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C211C6471C886D2B00E0F280 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211C6461C886D2B00E0F280 /* SocketService.swift */; };
+		C211C6491C8876B100E0F280 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211C6481C8876B100E0F280 /* TaskService.swift */; };
+		C211C64B1C88ADAC00E0F280 /* ISODateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211C64A1C88ADAC00E0F280 /* ISODateFormatter.swift */; };
 		C250B5A91C5FB2120004FBF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */; };
 		C250B5AB1C5FB2120004FBF9 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */; };
 		C250B5AE1C5FB2120004FBF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C250B5AC1C5FB2120004FBF9 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		5631EC87D8F9E8808E5F1246 /* Pods_Workshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9421B100E1AF50A21319861 /* Pods-Workshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workshop/Pods-Workshop.debug.xcconfig"; sourceTree = "<group>"; };
 		C211C6461C886D2B00E0F280 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		C211C6481C8876B100E0F280 /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		C211C64A1C88ADAC00E0F280 /* ISODateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISODateFormatter.swift; sourceTree = "<group>"; };
 		C250B5A51C5FB2120004FBF9 /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C211C6461C886D2B00E0F280 /* SocketService.swift */,
+				C211C6481C8876B100E0F280 /* TaskService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				C2BF4C811C8866E7000841D1 /* TaskDateFormatter.swift */,
+				C211C64A1C88ADAC00E0F280 /* ISODateFormatter.swift */,
 			);
 			name = formatter;
 			sourceTree = "<group>";
@@ -349,9 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C211C6491C8876B100E0F280 /* TaskService.swift in Sources */,
 				C250B5D41C5FCB900004FBF9 /* TaskDetailView.swift in Sources */,
 				C250B5CB1C5FB6270004FBF9 /* Task.swift in Sources */,
 				C250B5AB1C5FB2120004FBF9 /* TaskListViewController.swift in Sources */,
+				C211C64B1C88ADAC00E0F280 /* ISODateFormatter.swift in Sources */,
 				C250B5A91C5FB2120004FBF9 /* AppDelegate.swift in Sources */,
 				C250B5C91C5FB5FD0004FBF9 /* TaskTableViewCell.swift in Sources */,
 				C2BF4C7F1C886677000841D1 /* BlockBasedDatePicker.swift in Sources */,

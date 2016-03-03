@@ -29,6 +29,7 @@ class AddTaskViewController: UIViewController {
     
     @IBAction func didPressSaveTaskButton(sender: AnyObject) {
         let task = Task(
+            id: Int(arc4random()),
             name: nameTextField.text ?? "Task Name",
             dueTo: dateFormatter.dateFromString(
                 taskDueTextField.text ?? ""

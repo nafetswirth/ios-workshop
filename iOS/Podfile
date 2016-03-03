@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Workshop' do
 pod 'Socket.IO-Client-Swift', '~> 5.5.0'
+pod 'Alamofire', '~> 3.0'
 end
 
 target 'WorkshopTests' do

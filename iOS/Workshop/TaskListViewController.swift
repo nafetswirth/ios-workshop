@@ -16,19 +16,56 @@ class TaskListViewController: UIViewController {
     
     private let CELL_IDENTIFIER = "taskCell"
     
-    //this will get replaced later on by date from the server
-    private lazy var tasks: [Task] = [
-        Task(name: "A Thing", dueTo: NSDate(), isCompleted: false),
-        Task(name: "Another Thing", dueTo: NSDate().dateByAddingTimeInterval(60), isCompleted: false),
-        Task(name: "Another One", dueTo: NSDate().dateByAddingTimeInterval(120), isCompleted: false),
-        Task(name: "Horrible Thing", dueTo: NSDate().dateByAddingTimeInterval(180), isCompleted: false)
-    ].sort({$0 < $1})
+    private lazy var tasks: [Task] = []
+    
+    private var taskService: TaskServiceProtocol = {
+        let baseURL = NSURL(string: "http://localhost:1337")!
+        return TaskService(
+            baseURL: baseURL,
+            socketService: SocketService(URL: baseURL, shouldLog: true)
+        )
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         taskTableView.delegate = self
         taskTableView.dataSource = self
+        
+        taskService.getTasks { (tasks, error) -> Void in
+            if let error = error {
+                print(error)
+                self.showNetworkAlert()
+                return
+            }
+            self.tasks = tasks
+            self.taskTableView.reloadData()
+        }
+        addTaskCallbacks()
+    }
+    
+    private func addTaskCallbacks() {
+        taskService.onSocketTaskCreated() { task in
+            let index = self.tasks.indexOf({$0.id == task.id})
+            if index != nil {
+                return
+            }
+            self.tasks.append(task)
+            self.tasks.sortInPlace({$0 < $1})
+            guard let newIndex = self.tasks.indexOf({$0.id == task.id}) else {
+                return
+            }
+            self.taskTableView.insertRowsAtIndexPaths([NSIndexPath(forRow: newIndex, inSection: 0)], withRowAnimation: .Fade)
+        }
+        
+        taskService.onSocketTaskDestroyed() { task in
+            guard let index = self.tasks.indexOf({$0.id == task.id}) else {
+                return
+            }
+            
+            self.tasks.removeAtIndex(index)
+            self.taskTableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: .Fade)
+        }
     }
     
     @IBAction func didPressComposeNewTaskButton(sender: UIBarButtonItem) {
@@ -37,6 +74,12 @@ class TaskListViewController: UIViewController {
         }
         controller.delegate = self
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    private func showNetworkAlert() {
+        let alertController = UIAlertController(title: "Error", message: "OOOOPS lel", preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "K", style: .Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
 
@@ -53,8 +96,16 @@ extension TaskListViewController: UITableViewDelegate {
         
         switch editingStyle {
         case .Delete:
-            tasks.removeAtIndex(indexPath.row)
+            let removedTask = tasks.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+            taskService.deleteTask(removedTask) { (task, error) -> Void in
+                if let error = error {
+                    print(error)
+                    self.showNetworkAlert()
+                    return
+                }
+            }
         default:
             return
         }
@@ -85,17 +136,27 @@ extension TaskListViewController: AddTaskDelegate {
         guard let task = task else {
             return
         }
-        self.tasks.append(task)
-        self.tasks.sortInPlace({$0 < $1})
         
-        guard let taskIndex = self.tasks.indexOf({$0.name == task.name}) else {
-            return
-        }
-        
-        self.taskTableView.insertRowsAtIndexPaths([
+        self.taskService.createTask(task) { (createdTask, error) in
+            guard let createdTask = createdTask where error == nil else {
+                print(error)
+                self.showNetworkAlert()
+                return
+            }
+            
+            self.tasks.append(createdTask)
+            self.tasks.sortInPlace({$0 < $1})
+            
+            guard let taskIndex = self.tasks.indexOf({$0.name == task.name}) else {
+                return
+            }
+            
+            self.taskTableView.insertRowsAtIndexPaths([
                 NSIndexPath(
                     forRow: taskIndex, inSection: 0
-            )],
-            withRowAnimation: .Fade)
+                )],
+                withRowAnimation: .Fade
+            )
+        }
     }
 }
