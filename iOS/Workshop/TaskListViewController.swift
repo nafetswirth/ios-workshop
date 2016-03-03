@@ -144,6 +144,11 @@ extension TaskListViewController: AddTaskDelegate {
                 return
             }
             
+            let index = self.tasks.indexOf({$0.id == createdTask.id})
+            if index != nil {
+                return
+            }
+            
             self.tasks.append(createdTask)
             self.tasks.sortInPlace({$0 < $1})
             

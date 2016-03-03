@@ -54,7 +54,7 @@
         }
 
         function handleSocketMessage(message) {
-            if(message.verb !== 'created' && message.verb !== 'updated') {
+            if(message.verb !== 'created' && message.verb !== 'destroyed') {
                 return;
             }
 
@@ -64,6 +64,7 @@
                 }
                 vm.tasks.push(message.data);
             } else if(message.verb === 'destroyed') {
+                console.log(message);
                 vm.tasks = vm.tasks.filter(function(task) {
                     return task.id !== message.previous.id;
                 });
