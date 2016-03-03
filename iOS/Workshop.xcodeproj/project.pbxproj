@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C250B5A91C5FB2120004FBF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */; };
-		C250B5AB1C5FB2120004FBF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5AA1C5FB2120004FBF9 /* ViewController.swift */; };
+		C250B5AB1C5FB2120004FBF9 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */; };
 		C250B5AE1C5FB2120004FBF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C250B5AC1C5FB2120004FBF9 /* Main.storyboard */; };
 		C250B5B01C5FB2120004FBF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C250B5AF1C5FB2120004FBF9 /* Assets.xcassets */; };
 		C250B5B31C5FB2120004FBF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C250B5B11C5FB2120004FBF9 /* LaunchScreen.storyboard */; };
 		C250B5BE1C5FB2120004FBF9 /* WorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5BD1C5FB2120004FBF9 /* WorkshopTests.swift */; };
+		C250B5C91C5FB5FD0004FBF9 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5C81C5FB5FD0004FBF9 /* TaskTableViewCell.swift */; };
+		C250B5CB1C5FB6270004FBF9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5CA1C5FB6270004FBF9 /* Task.swift */; };
+		C250B5CD1C5FB8EA0004FBF9 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5CC1C5FB8EA0004FBF9 /* AddTaskViewController.swift */; };
+		C250B5D41C5FCB900004FBF9 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250B5D31C5FCB900004FBF9 /* TaskDetailView.swift */; };
+		C2BF4C7F1C886677000841D1 /* BlockBasedDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF4C7E1C886677000841D1 /* BlockBasedDatePicker.swift */; };
+		C2BF4C821C8866E7000841D1 /* TaskDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF4C811C8866E7000841D1 /* TaskDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +34,7 @@
 /* Begin PBXFileReference section */
 		C250B5A51C5FB2120004FBF9 /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C250B5AA1C5FB2120004FBF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		C250B5AD1C5FB2120004FBF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C250B5AF1C5FB2120004FBF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C250B5B21C5FB2120004FBF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +42,12 @@
 		C250B5B91C5FB2120004FBF9 /* WorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C250B5BD1C5FB2120004FBF9 /* WorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopTests.swift; sourceTree = "<group>"; };
 		C250B5BF1C5FB2120004FBF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C250B5C81C5FB5FD0004FBF9 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		C250B5CA1C5FB6270004FBF9 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C250B5CC1C5FB8EA0004FBF9 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		C250B5D31C5FCB900004FBF9 /* TaskDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		C2BF4C7E1C886677000841D1 /* BlockBasedDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBasedDatePicker.swift; sourceTree = "<group>"; };
+		C2BF4C811C8866E7000841D1 /* TaskDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +90,12 @@
 			isa = PBXGroup;
 			children = (
 				C250B5A81C5FB2120004FBF9 /* AppDelegate.swift */,
-				C250B5AA1C5FB2120004FBF9 /* ViewController.swift */,
+				C2BF4C7C1C8864E4000841D1 /* cells */,
+				C250B5D01C5FCB610004FBF9 /* controller */,
+				C2BF4C7D1C886648000841D1 /* datepicker */,
+				C2BF4C801C8866CA000841D1 /* formatter */,
+				C250B5D11C5FCB670004FBF9 /* model */,
+				C250B5D21C5FCB740004FBF9 /* views */,
 				C250B5AC1C5FB2120004FBF9 /* Main.storyboard */,
 				C250B5AF1C5FB2120004FBF9 /* Assets.xcassets */,
 				C250B5B11C5FB2120004FBF9 /* LaunchScreen.storyboard */,
@@ -94,6 +111,55 @@
 				C250B5BF1C5FB2120004FBF9 /* Info.plist */,
 			);
 			path = WorkshopTests;
+			sourceTree = "<group>";
+		};
+		C250B5D01C5FCB610004FBF9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C250B5CC1C5FB8EA0004FBF9 /* AddTaskViewController.swift */,
+				C250B5AA1C5FB2120004FBF9 /* TaskListViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		C250B5D11C5FCB670004FBF9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C250B5CA1C5FB6270004FBF9 /* Task.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		C250B5D21C5FCB740004FBF9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C250B5D31C5FCB900004FBF9 /* TaskDetailView.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		C2BF4C7C1C8864E4000841D1 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				C250B5C81C5FB5FD0004FBF9 /* TaskTableViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		C2BF4C7D1C886648000841D1 /* datepicker */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF4C7E1C886677000841D1 /* BlockBasedDatePicker.swift */,
+			);
+			name = datepicker;
+			sourceTree = "<group>";
+		};
+		C2BF4C801C8866CA000841D1 /* formatter */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF4C811C8866E7000841D1 /* TaskDateFormatter.swift */,
+			);
+			name = formatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C250B5AB1C5FB2120004FBF9 /* ViewController.swift in Sources */,
+				C250B5D41C5FCB900004FBF9 /* TaskDetailView.swift in Sources */,
+				C250B5CB1C5FB6270004FBF9 /* Task.swift in Sources */,
+				C250B5AB1C5FB2120004FBF9 /* TaskListViewController.swift in Sources */,
 				C250B5A91C5FB2120004FBF9 /* AppDelegate.swift in Sources */,
+				C250B5C91C5FB5FD0004FBF9 /* TaskTableViewCell.swift in Sources */,
+				C2BF4C7F1C886677000841D1 /* BlockBasedDatePicker.swift in Sources */,
+				C250B5CD1C5FB8EA0004FBF9 /* AddTaskViewController.swift in Sources */,
+				C2BF4C821C8866E7000841D1 /* TaskDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +458,7 @@
 				C250B5C41C5FB2120004FBF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C250B5C51C5FB2120004FBF9 /* Build configuration list for PBXNativeTarget "WorkshopTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +467,7 @@
 				C250B5C71C5FB2120004FBF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
