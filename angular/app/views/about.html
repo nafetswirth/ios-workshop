@@ -1,0 +1,18 @@
+<div class="jumbotron">
+<table st-table="vm.incidents" class="table table-striped">
+      <thead>
+      <tr>
+          <th>Id</th>
+          <th>Started at</th>
+          <th>Resolved at</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="incident in vm.incidents">
+          <td>{{incident.id}}</td>
+          <td>{{incident.createdAt}}</td>
+          <td>{{incident.resolvedAt}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

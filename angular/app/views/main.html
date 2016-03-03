@@ -1,0 +1,22 @@
+<div class="jumbotron">
+<table st-table="vm.nibos" class="table table-striped">
+      <thead>
+      <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Due To</th>
+          <th></th>
+          <th></th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="task in vm.tasks | orderBy:'dueTo'">
+          <td>{{task.id}}</td>
+          <td>{{task.name}}</td>
+          <td>{{task.dueTo | date}}</td>
+          <td><button class="btn-sm btn-danger" ng-click="vm.deleteTask(task)">Delete</button><td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+  <button class="btn-sm btn-success" ng-click="vm.createTask({niboId: nibo.id})">New task</button>
